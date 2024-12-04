@@ -1,0 +1,79 @@
+{
+  "guests":[
+    {
+      "id": 1,
+      "name": "Papada",
+      "photoUrl": "http://www.example.com/johndoe.jpg",
+      "companions": [
+        {
+          "name": "heitor",
+          "photoUrl": "http://www.example.com/janedoe.jpg"
+        },
+        {
+          "name": "Rose",
+          "photoUrl": "http://www.example.com/johnsmith.jpg"
+        }
+      ],
+      "confirmed": true
+    },
+    {
+      "id": 2,
+      "name": "tucano",
+      "photoUrl": "http://www.example.com/johndoe.jpg",
+      "companions": [
+        {
+          "name": "Alex",
+          "photoUrl": "http://www.example.com/janedoe.jpg"
+        },
+        {
+          "name": "Lise",
+          "photoUrl": "http://www.example.com/johnsmith.jpg"
+        }
+      ],
+      "confirmed": true
+    },
+    {
+      "id": 3,
+      "name": "Jamanta",
+      "photoUrl": "http://www.example.com/johndoe.jpg",
+      "companions": [
+        {
+          "name": "Theo",
+          "photoUrl": "http://www.example.com/janedoe.jpg"
+        },
+        {
+          "name": "zumira",
+          "photoUrl": "http://www.example.com/johnsmith.jpg"
+        }
+      ],
+      "confirmed": true
+    }
+
+  ],
+
+  "presentList":[
+    {"name": "Geladeira", "photoUrl": "https://www.casar.com/imagens/geladeira.jpg"},
+    {"name": "Fogão", "photoUrl": "https://www.casar.com/imagens/fogao.jpg"},
+    {"name": "TV", "photoUrl": "https://www.casar.com/imagens/tv.jpg"},
+    {"name": "Máquina de Lavar", "photoUrl": "https://www.casar.com/imagens/maquina-lavar.jpg"},
+    {"name": "Sofá", "photoUrl": "https://www.westwing.com.br/sofa.jpg"},
+    {"name": "Rack", "photoUrl": "https://www.westwing.com.br/rack.jpg"},
+    {"name": "Cama de Casal", "photoUrl": "https://www.westwing.com.br/cama-casal.jpg"},
+    {"name": "Mesa de Jantar", "photoUrl": "https://www.westwing.com.br/mesa-jantar.jpg"},
+    {"name": "Buffet/Aparador", "photoUrl": "https://www.westwing.com.br/aparador.jpg"},
+    {"name": "Guarda-Roupa", "photoUrl": "https://www.westwing.com.br/guarda-roupa.jpg"},
+    {"name": "Jogo de Toalhas de Banho", "photoUrl": "https://www.westwing.com.br/toalhas.jpg"},
+    {"name": "Jogo de Cama Completo", "photoUrl": "https://www.westwing.com.br/jogo-cama.jpg"},
+    {"name": "Tapete", "photoUrl": "https://www.westwing.com.br/tapete.jpg"},
+    {"name": "Aparelho de Jantar", "photoUrl": "https://www.westwing.com.br/aparelho-jantar.jpg"},
+    {"name": "Conjunto de Talheres", "photoUrl": "https://www.westwing.com.br/talheres.jpg"},
+    {"name": "Liquidificador", "photoUrl": "https://www.westwing.com.br/liquidificador.jpg"},
+    {"name": "Faqueiro", "photoUrl": "https://www.westwing.com.br/faqueiro.jpg"},
+    {"name": "Jogo de Copos", "photoUrl": "https://www.westwing.com.br/copos.jpg"},
+    {"name": "Micro-ondas", "photoUrl": "https://www.westwing.com.br/micro-ondas.jpg"},
+    {"name": "Conjunto de Taças", "photoUrl": "https://www.westwing.com.br/tacas.jpg"}
+  ]
+  
+  
+  
+}
