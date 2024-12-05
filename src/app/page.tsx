@@ -1,9 +1,9 @@
 'use client'
-import { SectionContent } from '@/components/sectionContent'
 import { Button } from '@/components/ui/button'
 import { Toaster } from '@/components/ui/toaster'
 import { useToast } from '@/hooks/use-toast'
 import { Copy } from 'lucide-react'
+import Link from 'next/link'
 const pixKey = 'suachavepix@exemplo.com'
 export default function Home() {
   const { toast } = useToast()
@@ -89,7 +89,7 @@ export default function Home() {
             <h3>Venha fazer parte desse momento especial em nossas vidas</h3>
             <strong>Clique no botão abaixo</strong>
           <Button>
-            <a href="/presence">confirme sua presença</a>
+            <Link href="/presence">confirme sua presença</Link>
           </Button>
           </div>
           <div className=" w-full flex flex-col-reverse gap-4">

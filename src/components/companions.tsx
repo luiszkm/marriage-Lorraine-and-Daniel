@@ -2,7 +2,7 @@ import { Avatar, AvatarFallback, AvatarImage } from '@radix-ui/react-avatar';
 import { Check, CircleX, User } from 'lucide-react';
 
 type CompanionsProps = {
-  companions: Companion[];
+  companions: Guest[];
   presenceStatus: Record<string, 'confirmed' | 'not_confirmed'>;
   onConfirm: (id: string) => void;
   onDeny: (id: string) => void;

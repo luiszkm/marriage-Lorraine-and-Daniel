@@ -1,7 +1,6 @@
 import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar'
 import { User } from 'lucide-react';
-interface CardAvatarProps extends Guest {} 
-export function CardAvatar({ name, photoUrl }: CardAvatarProps) {
+export function CardAvatar({ name, photoUrl }: Guest) {
   return (
     <a
       href={`/${name}`}
