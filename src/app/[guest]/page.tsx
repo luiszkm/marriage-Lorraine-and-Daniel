@@ -123,7 +123,7 @@ export default function Guest() {
                     <FormLabel>Email</FormLabel>
                     <FormControl>
                       <Input
-                        onChangeCapture={e => setUserEmail(e.target.value)}
+                        onChangeCapture={e => setUserEmail((e.target as HTMLInputElement).value)}
                         placeholder="Digite seu e-mail"
                         {...field}
                       />
