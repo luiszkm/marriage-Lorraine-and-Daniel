@@ -103,7 +103,7 @@ export default function Home() {
                 <a
                   title="abrir com waze"
                   className="text-blue-500"
-                  href="https://waze.com/ul?ll=-19.9683218,-44.0018731&navigate=yes"
+                  href="https://waze.com/ul?ll=-19.975409528642405,-44.019532295626284&navigate=yes"
                   target="_blank"
                 >
                   <img
@@ -117,7 +117,7 @@ export default function Home() {
                 <a
                   className="text-blue-500"
                   title="abrir com google maps"
-                  href="https://www.google.com/maps/dir/?api=1&destination=-19.9683218,-44.0018731"
+                  href="https://www.google.com/maps/dir/?api=1&destination=-19.975409528642405,-44.019532295626284"
                   target="_blank"
                 >
                   <img

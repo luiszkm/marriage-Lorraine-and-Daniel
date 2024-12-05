@@ -1,27 +1,24 @@
 {
   "passwords": [
     {
-      "password": "123456",
-      "guests": [
-        {
-          "name": "Papada",
-          "photoUrl": "http://www.example.com/johndoe.jpg"
-        },
-        {
-          "name": "heitor",
-          "photoUrl": "http://www.example.com/janedoe.jpg"
-        },
-        {
-          "name": "Rose",
-          "photoUrl": "http://www.example.com/johnsmith.jpg"
-        }
-      ],
-      "confirmed": [
-        "Papada", "Rose", "Heitor"
-      ],
-      "present": [
-      ],
-      "email": "papa"
+        "password": "123",
+        "guests": [
+          {
+            "name": "Papada",
+            "photoUrl": "http://www.example.com/johndoe.jpg"
+          },
+          {
+            "name": "heitor",
+            "photoUrl": "http://www.example.com/janedoe.jpg"
+          },
+          {
+            "name": "Rose",
+            "photoUrl": "http://www.example.com/johnsmith.jpg"
+          }
+        ],
+        "confirmed": ["Papada", "Rose", "Heitor"],
+        "present": [],
+        "email": "papa"
     }
   ],
 

@@ -1,49 +1,49 @@
 'use client'
-import { CardAvatar } from '@/components/cardAvatar'
-import { ScrollArea } from '@/components/ui/scroll-area'
-import guestsLists from '@/../guestsLists.json'
 import { Input } from '@/components/ui/input'
 import { useEffect, useState } from 'react'
 import { SectionContent } from '@/components/sectionContent'
+import { Button } from '@/components/ui/button'
+import eventDataJson from '@/../marriageList.json'
+import { useRouter } from 'next/navigation'
 
 export default function Presence() {
-  const guestList = guestsLists.guests
-  const [search, setSearch] = useState('')
-  const [filteredGuests, setFilteredGuests] = useState(guestList)
+  const guestList = eventDataJson.passwords
+  const [password, setPassword] = useState('')
+
+  const {push} = useRouter()
+
+  function VerifyPassword (){
+    const guest = guestList.find(i => i.password === password.toLowerCase())
+    if(guest){
+      push(`/${password.toLowerCase()}`)
+     
+    }else{
+      alert('senha incorreta')
+    }
+
+
+  }
+
 
   useEffect(() => {
-    const filteredGuests = guestList.filter(guest =>
-      guest.name.toLowerCase().includes(search.toLowerCase())
-    )
-    setFilteredGuests(filteredGuests)
-  }, [search])
+
+  }, [password])
   return (
     <main className="p-2 flex flex-col items-center gap-2">
       <SectionContent>
         <h1 className="font-bold text-2xl">Confirme sua presença</h1>
+password{password}
+        <p>Para confirmar sua presença, por favor, Digite a Palavra magica</p>
 
-        <p>
-          Para confirmar sua presença, por favor, Digite a Palavra magica
-        </p>
-
-        <Input
-          onChange={e => setSearch(e.target.value)}
-          placeholder="Pesquise seu nome"
-          className="w-[350px]"
-        />
-        <ScrollArea className="h-[500px] max-h-full w-[350px] p-2 rounded-md border  flex">
-          {filteredGuests &&
-            filteredGuests.map((guest, index) => (
-              <CardAvatar
-                key={index}
-                id={guest.id}
-                companions={guest.companions}
-                name={guest.name}
-                confirmed={guest.confirmed}
-                photoUrl=""
-              />
-            ))}
-        </ScrollArea>
+        <div className='flex gap-4 items-center'>
+          <Input
+            onChange={e => setPassword(e.target.value)}
+            placeholder="Digite sua palavra chave"
+            className="w-[350px]"
+          />
+          <Button onClick={VerifyPassword}
+           className=''>Confirmar</Button>
+        </div>
       </SectionContent>
     </main>
   )

@@ -29,7 +29,7 @@ import { useEffect, useState } from 'react'
 import { Companions } from '@/components/companions'
 import { Textarea } from '@/components/ui/textarea'
 
-import eventDataJson from '@/../guestsLists.json'
+import eventDataJson from '@/../marriageList.json'
 import { PresentSection } from '@/components/presentSection'
 import { SectionContent } from '@/components/sectionContent'
 const formSchema = z.object({
@@ -49,7 +49,7 @@ export default function Guest() {
   const [userEmail, setUserEmail] = useState('')
   const [dialogOpen, setDialogOpen] = useState(false)
   const { guest } = useParams()
-  const guestName = eventData.guests.find(i => i.name === guest)
+  const guestName = eventData.passwords.find(i => i.password === guest)
   const confirmedKeys = Object.keys(presenceStatus).filter(
     key => presenceStatus[key] === 'confirmed'
   )
@@ -83,8 +83,14 @@ export default function Guest() {
     setDialogOpen(true)
     // Do something with the form values.
     // ✅ This will be type-safe and validated.
-    console.log(values)
+    console.log({
+      ...values,
+      presents: values.presents.split(',').map(present => present.trim()),
+      confirmed: confirmedKeys
+    })
   }
+  console.log(guest)
+
   useEffect(() => {
     // Atualiza o valor do formulário sempre que o estado `selectedPresents` muda
     form.setValue(
@@ -97,7 +103,7 @@ export default function Guest() {
       <SectionContent>
         <div className="w-full h-full p-2 flex flex-col sm:flex-row items-start justify-between px-6 gap-5">
           <div className="w-full sm:max-w-80">
-            <h2 className="font-bold">{`Bem vindo ${guest}!`}</h2>
+            <h2 className="font-bold">{`Bem vindo ${guestName?.guests[0].name}!`}</h2>
             <p className="">
               Gentileza selecionar abaixo uma sugestão de presente, preencha com
               seu email e clique no botão confirmar{' '}
@@ -167,26 +173,23 @@ export default function Guest() {
             <DialogContent>
               <DialogHeader>
                 <DialogTitle>
-                  {guest || 'Convidado'}, Revise os dados abaixo e clique em
+                  {guestName?.guests[0].name || 'Convidado'}, Revise os dados abaixo e clique em
                   confirmar presença
                 </DialogTitle>
+                <DialogDescription>
+                </DialogDescription>
                 <div className="text-sm text-muted-foreground">
                   <ul className="mb-4">
-                    <li>{`(${
-                      confirmedKeys.length + 1
-                    }) convidado(s) confirmado(s):`}</li>
+                    <li>{`(${confirmedKeys.length}) convidado(s) confirmado(s):`}</li>
                     {confirmedKeys.map((key, index) => (
                       <li key={index}>{key}</li>
                     ))}
-                    <li>{guest}</li>
                     <li className="mt-4 border-t">{`Presentes selecionados (${selectedPresents.length})`}</li>
                     {selectedPresents.map((present, index) => (
                       <li key={index}>{present.name}</li>
                     ))}
                   </ul>
-                  <strong>{`Total de pessoas: ${
-                    confirmedKeys.length + 1
-                  }`}</strong>
+                  <strong>{`Total de pessoas: ${confirmedKeys.length}`}</strong>
                 </div>
               </DialogHeader>
               <DialogFooter className="flex items-center justify-between w-full">
@@ -197,10 +200,10 @@ export default function Guest() {
               </DialogFooter>
             </DialogContent>
           </Dialog>
-          <div className='w-full sm:max-w-72'>
+          <div className="w-full sm:max-w-72">
             <p>Incluir acompanhante</p>
             <Companions
-              companions={guestName!.companions}
+              companions={guestName!.guests}
               presenceStatus={presenceStatus}
               onConfirm={handleConfirm}
               onDeny={handleDeny}
