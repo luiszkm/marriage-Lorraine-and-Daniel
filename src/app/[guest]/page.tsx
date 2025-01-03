@@ -99,7 +99,7 @@ export default function Guest() {
     )
   }, [selectedPresents, form])
   return (
-    <main className="flex flex-col gap-2 items-center px-2">
+    <main className="flex w-full flex-col gap-2 items-center px-2">
       <SectionContent>
         <div className="w-full h-full p-2 flex flex-col sm:flex-row items-start justify-between px-6 gap-5">
           <div className="w-full sm:max-w-80">

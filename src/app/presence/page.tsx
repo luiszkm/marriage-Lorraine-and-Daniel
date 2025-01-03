@@ -18,7 +18,7 @@ export default function Presence() {
       push(`/${password.toLowerCase()}`)
      
     }else{
-      alert('senha incorreta')
+      alert('palavra chave incorreta')
     }
 
 
@@ -32,7 +32,6 @@ export default function Presence() {
     <main className="p-2 flex flex-col items-center gap-2">
       <SectionContent>
         <h1 className="font-bold text-2xl">Confirme sua presença</h1>
-password{password}
         <p>Para confirmar sua presença, por favor, Digite a Palavra magica</p>
 
         <div className='flex gap-4 items-center'>
