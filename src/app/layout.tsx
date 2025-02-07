@@ -28,7 +28,7 @@ export default function RootLayout({
       <body
         className="flex flex-col items-center justify-center min-h-screen  text-foreground font-geist-sans"
       >
-        <div className="w-full max-w-screen-lg bg-black flex flex-col mx-auto items-center justify-center gap-4 p-4">
+        <div className="w-full max-w-[1400px] bg-black flex flex-col mx-auto items-center justify-center gap-4 p-4">
         {children}
 
         </div>

@@ -35,19 +35,18 @@ export default function Home() {
   }
 
   return (
-    <main className="w-full p-2 flex flex-col items-center gap-4">
-      <section className=" flex justify-between w-full  bg-slate-50">
-        <div className="w-full  h-full  ">
+    <main className="w-full h-full p-2 flex flex-col items-center gap-4">
+      <section className=" flex justify-between w-full h-screen items-center  bg-slate-50">
+        <div className="w-full h-full border-4 "
+        >
           <Image
-            className=" w-full h-full "
+            className=" w-full h-full  "
             src={mainhero}
             alt="logo"
-            width={620}
-            height={640}
           />
         </div>
 
-        <div className=" w-full  h-full p-10 flex flex-col items-center justify-center">
+        <div className=" w-full bgg  h-full p-10 flex flex-col items-center justify-center">
           <h1 className="text-7xl">Lorraine</h1>
           <span className="text-7xl">&</span>
           <h2 className="text-7xl">Daniel</h2>
