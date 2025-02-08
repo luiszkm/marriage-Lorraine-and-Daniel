@@ -1,15 +1,29 @@
 import { useEffect, useState } from 'react'
-import eventDataJson from '@/../guestsLists.json'
+import eventDataJson from '@/../marriageList.json'
 import { CardPresenter } from './cardPresenter'
 import { Input } from './ui/input'
 
 type Present = {
   name: string
   photoUrl: string
+  linkUrl: string
 }
 
+type Guests = {
+  name: string
+  photoUrl: string
+}
+
+type Password = {
+  password: string
+  guests: Guests[]
+  email: string
+  confirmed: string[]
+  present: string[]
+}
 type EventData = {
   presentList: Present[]
+  passwords: Password[]
 }
 
 type PresentSectionProps = {
@@ -44,7 +58,7 @@ export function PresentSection({ onSelectionChange }: PresentSectionProps) {
   }
 
   return (
-    <div className='gap-4 flex flex-col border-t py-5 border-green-900'>
+    <div className="gap-4 flex flex-col border-t py-5 border-green-900">
       <Input
         onChange={e => setSearch(e.target.value)}
         placeholder="Pesquise seu presente"
@@ -55,7 +69,8 @@ export function PresentSection({ onSelectionChange }: PresentSectionProps) {
           presentFilter.map(present => (
             <CardPresenter
               onClick={() => handlePresentClick(present)}
-              key={present.name}
+              linkUrl={present.linkUrl}
+              key={present.photoUrl}
               name={present.name}
               photoUrl={present.photoUrl}
               isSelected={selectedPresents.some(p => p.name === present.name)}

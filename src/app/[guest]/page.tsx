@@ -28,10 +28,11 @@ import { Input } from '@/components/ui/input'
 import { useEffect, useState } from 'react'
 import { Companions } from '@/components/companions'
 import { Textarea } from '@/components/ui/textarea'
-
 import eventDataJson from '@/../marriageList.json'
 import { PresentSection } from '@/components/presentSection'
-import { SectionContent } from '@/components/sectionContent'
+import Image from 'next/image'
+
+import mainhero from '@/../public/img/main-hero.svg'
 const formSchema = z.object({
   email: z.string().email({
     message: 'Digite um email valido'
@@ -89,7 +90,6 @@ export default function Guest() {
       confirmed: confirmedKeys
     })
   }
-  console.log(guest)
 
   useEffect(() => {
     // Atualiza o valor do formulário sempre que o estado `selectedPresents` muda
@@ -99,9 +99,17 @@ export default function Guest() {
     )
   }, [selectedPresents, form])
   return (
-    <main className="flex w-full flex-col gap-2 items-center px-2">
-      <SectionContent>
-        <div className="w-full h-full p-2 flex flex-col sm:flex-row items-start justify-between px-6 gap-5">
+    <main className="flex  w-full flex-col gap-2 items-center px-2">
+ 
+      <section className="flex relative flex-col min-h-screen items-center w-full max-w-screen-xl bg-slate-50">
+      <Image
+        className="absolute top-0 opacity-15  rotate-90"
+        src={mainhero}
+        alt="logo"
+        width={500}
+        height={200}
+      />
+        <div className="w-full h-full p-2 flex flex-col sm:flex-row z-50 items-start justify-between px-6 gap-5 font-bold">
           <div className="w-full sm:max-w-80">
             <h2 className="font-bold">{`Bem vindo ${guestName?.guests[0].name}!`}</h2>
             <p className="">
@@ -113,7 +121,7 @@ export default function Guest() {
           <Form {...form}>
             <form
               onSubmit={form.handleSubmit(onSubmit)}
-              className="flex flex-col gap-4 px-2 w-full"
+              className="flex flex-col gap-4 px-2 w-full z-50"
             >
               <FormField
                 control={form.control}
@@ -123,7 +131,9 @@ export default function Guest() {
                     <FormLabel>Email</FormLabel>
                     <FormControl>
                       <Input
-                        onChangeCapture={e => setUserEmail((e.target as HTMLInputElement).value)}
+                        onChangeCapture={e =>
+                          setUserEmail((e.target as HTMLInputElement).value)
+                        }
                         placeholder="Digite seu e-mail"
                         {...field}
                       />
@@ -173,11 +183,10 @@ export default function Guest() {
             <DialogContent>
               <DialogHeader>
                 <DialogTitle>
-                  {guestName?.guests[0].name || 'Convidado'}, Revise os dados abaixo e clique em
-                  confirmar presença
+                  {guestName?.guests[0].name || 'Convidado'}, Revise os dados
+                  abaixo e clique em confirmar presença
                 </DialogTitle>
-                <DialogDescription>
-                </DialogDescription>
+                <DialogDescription></DialogDescription>
                 <div className="text-sm text-muted-foreground">
                   <ul className="mb-4">
                     <li>{`(${confirmedKeys.length}) convidado(s) confirmado(s):`}</li>
@@ -211,7 +220,7 @@ export default function Guest() {
           </div>
         </div>
         <PresentSection onSelectionChange={handlePresentSelection} />
-      </SectionContent>
+      </section>
     </main>
   )
 }
