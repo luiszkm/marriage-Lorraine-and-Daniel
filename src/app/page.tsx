@@ -71,7 +71,7 @@ export default function Home() {
           src={mainhero}
           alt="logo"
         />
-           <Image
+        <Image
           className="absolute bottom-0 left-0 opacity-30 w-60 md:w-96 -rotate-90"
           src={mainhero}
           alt="logo"
@@ -83,10 +83,15 @@ export default function Home() {
                 Um amor que floresceu.
               </h2>
               <p className=" text-md sm:text-lg md:text-2xl">
-                Nos conhecemos desde sempre, melhores amigos nos melhores e
-                piores dias. <br />
-                Depois de décadas de incidentes e ombro amigo sempre disponível,
-                percebemos que a pessoa certa estava bem diante de nossos olhos.
+                Cinco anos atrás, nossas vidas se cruzaram de uma forma
+                inesperada, e começamos como amigos, sem saber que aquele
+                encontro mudaria tudo. À medida que o tempo foi passando, aquilo
+                que parecia ser só uma amizade sincera começou a se transformar
+                em algo muito maior. Nossos olhares passaram a se cruzar de
+                maneira diferente, nossos sorrisos começaram a ter um novo
+                significado e, sem que percebêssemos, nos tornamos muito mais do
+                que amigos. Passamos a ser companheiros de vida, aqueles que não
+                vivem sem o outro.
               </p>
             </div>
             <Image
@@ -114,12 +119,14 @@ export default function Home() {
         />
         <div className="flex relative flex-col justify-between sm:flex-row  p-2 items-center h-full  w-full">
           <div className="flex flex-col w-full items-center gap-8 justify-evenly">
-            <div className='flex flex-col gap-4'>
-              <h2 className="font-bold text-3xl md:text-6xl ">Operação Lua de mel</h2>
-              <p className='text-md sm:text-lg md:text-3xl'>
+            <div className="flex flex-col gap-4">
+              <h2 className="font-bold text-3xl md:text-6xl ">
+                Operação Lua de mel
+              </h2>
+              <p className="text-md sm:text-lg md:text-3xl">
                 Quer ajudar a escrever nossa história de amor em Gramado? <br />
-                Mande um <strong>PIX</strong> e prometemos que vamos gastar tudo <br /> em fondue
-                e vinho... e um pouquinho na viagem
+                Mande um <strong>PIX</strong> e prometemos que vamos gastar tudo{' '}
+                <br /> em fondue e vinho... e um pouquinho na viagem
               </p>
             </div>
             <div className="flex flex-col  -mt-36">
@@ -128,19 +135,13 @@ export default function Home() {
                   className="mt-32 w-24 sm:w-96"
                   src={apoioIcon}
                   alt="apoio"
-                  
                 />
-                <Image
-                  className="mt-32 w-24 sm:w-72"
-                  src={aviao}
-                  alt="apoio"
-             
-                />
+                <Image className="mt-32 w-24 sm:w-72" src={aviao} alt="apoio" />
               </div>
               <Image className="-mt-48 w-full " src={carro} alt="logo" />
             </div>
           </div>
-          <div className='w-4/6 sm:w-full max-w-md'>
+          <div className="w-4/6 sm:w-full max-w-md">
             <div className=" border-4 w-full border-black p-1">
               <Image className="w-full " src={pixnoivos} alt="qr code pix" />
             </div>

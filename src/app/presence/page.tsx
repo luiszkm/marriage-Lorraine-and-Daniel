@@ -62,7 +62,7 @@ export default function Presence() {
           </Button>
         </div>
        </form>
-       <Image className="w-96 mt-4 rounded-full shadow-lg shadow-gray-600" src={noivosolhando} alt="logo" />
+       <Image className="w-96 mt-4 rounded-full z-50 shadow-lg shadow-gray-600" src={noivosolhando} alt="logo" />
 
       </section>
     </main>
