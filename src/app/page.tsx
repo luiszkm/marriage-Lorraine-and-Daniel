@@ -124,9 +124,11 @@ export default function Home() {
                 Operação Lua de mel
               </h2>
               <p className="text-md sm:text-lg md:text-3xl">
-                Quer ajudar a escrever nossa história de amor em Gramado? <br />
-                Mande um <strong>PIX</strong> e prometemos que vamos gastar tudo{' '}
-                <br /> em fondue e vinho... e um pouquinho na viagem
+                Operação Lua de mel Ativada 🚀 A missão é simples: aproveitar ao
+                máximo cada momento dessa viagem dos sonhos! Dê uma força pra
+                gente faça sua contribuição com um PIX 💰e torne nossa viagem
+                inesquecível!❤ Estamos contanto com todos vocês para tornar
+                nosso sonho realidade ✈👩‍❤‍👨
               </p>
             </div>
             <div className="flex flex-col  -mt-36">
