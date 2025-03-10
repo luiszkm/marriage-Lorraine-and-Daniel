@@ -219,6 +219,7 @@ export default function Guest() {
             />
           </div>
         </div>
+        <small className='text-sm'>clique em cima da imagem para seleciona-la, a mesma ficará verde quando selecionado</small>
         <PresentSection onSelectionChange={handlePresentSelection} />
       </section>
     </main>
